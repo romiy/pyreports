@@ -45,7 +45,7 @@ class myHandler(CGIHTTPRequestHandler):
             qry = str(row.sqlquery)
             qry = qry.replace('TXTTRANSLATE','/*TXTTRANSLATE*/')
             qry = qry.replace('txttranslate','/*TXTTRANSLATE*/')            
-            x = re.findall("\:[a-zA-Z0-9_]+",qry)
+            x = re.findall(":[a-zA-Z0-9_]+",qry)
 
         # parse query text for parameters
         y = dict.fromkeys(x)
